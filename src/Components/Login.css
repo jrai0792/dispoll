@@ -38,3 +38,8 @@
   background-color: rgb(183, 177, 177);
   color: black;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+}
