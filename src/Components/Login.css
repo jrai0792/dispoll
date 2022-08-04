@@ -1,0 +1,29 @@
+.main-container {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.login-container {
+  width: 50%;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 50px;
+  border: 1px solid #444;
+  background-color: rgb(236, 233, 233);
+}
+
+.login-header {
+  padding: 20px;
+}
+
+.login-label {
+  padding: 5px;
+  font-size: 20px;
+}
+
+#username, #password {
+  padding: 5px;
+  margin-bottom: 20px;
+}
