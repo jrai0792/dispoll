@@ -1,10 +1,14 @@
 import {React, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 
 export default function Login() {
 
   const [message, setMessage] = useState('');
+  const [loginStatus, setLoginStatus] = useState(false);
+
+  let history = useNavigate();
 
   const users = [
     {
@@ -45,7 +49,9 @@ export default function Login() {
 
     if(UserData) {
       if(UserData.password === userPassword) {
-        setMessage("Successfull login");
+        // setMessage("Successfull login");
+        setLoginStatus(true);
+        history("/Home");
       } else {
         setMessage("Incorrect Password")
       }
@@ -69,7 +75,7 @@ export default function Login() {
             {message && (
               <p className="error"> {message} </p>
             )}
-            <input type="submit" value="Login" className="login-btn" />
+            <input type="submit" value="Login" className="login-btn"/>
           </form>
       </div>
     </main>
